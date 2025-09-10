@@ -1,5 +1,3 @@
-using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst;
-using Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor;
 using Extraction.DDD.Example.Application.Ports.DocumentOcrWorkDispatcher;
 using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
 using Extraction.DDD.Example.Application.Ports.Extractor;
@@ -7,6 +5,10 @@ using Extraction.DDD.Example.Infrastructure.MongoDB;
 using Extraction.DDD.Example.Infrastructure.RecognitionMessageQueue;
 using Extraction.DDD.Example.Infrastructure.RecognitionOcrWorkDispatcherMessageQueue;
 using Hyland.Experience.Idp.Extraction.Api.Services;
+using Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor.ExtractFromImageDocument;
+using Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor.ExtractFromTextDocument;
+using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.GetExtractionJob;
+using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.StartNewExtractionJob;
 
 var builder = WebApplication.CreateBuilder(args);
 

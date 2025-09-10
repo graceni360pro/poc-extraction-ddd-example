@@ -1,6 +1,6 @@
 ﻿using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
 
-namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
+namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.GetExtractionJob
 {
 	public class GetExtractionJob : IGetExtractionJob
 	{

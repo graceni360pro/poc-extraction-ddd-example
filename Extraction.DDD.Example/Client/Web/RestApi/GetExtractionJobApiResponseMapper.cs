@@ -1,4 +1,4 @@
-﻿using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst;
+﻿using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.GetExtractionJob;
 
 namespace Extraction.DDD.Example.Client.Web.RestApi
 {

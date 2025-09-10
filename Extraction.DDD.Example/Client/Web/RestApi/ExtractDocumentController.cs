@@ -1,4 +1,5 @@
-using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst;
+using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.GetExtractionJob;
+using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.StartNewExtractionJob;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Extraction.DDD.Example.Client.Web.RestApi

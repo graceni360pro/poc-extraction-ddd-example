@@ -1,7 +1,7 @@
 ﻿using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
 using Extraction.DDD.Example.Domain;
 
-namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
+namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.GetExtractionJob
 {
 	public static class GetExtractionJobResponseMapper
 	{

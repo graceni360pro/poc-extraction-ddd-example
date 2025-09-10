@@ -1,4 +1,4 @@
-﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
+﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.StartNewExtractionJob
 {
 	public interface IStartNewExtractionJob
 	{

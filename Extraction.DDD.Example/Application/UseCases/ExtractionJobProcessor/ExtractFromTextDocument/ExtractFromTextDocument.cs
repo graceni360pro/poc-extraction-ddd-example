@@ -2,7 +2,7 @@
 using Extraction.DDD.Example.Application.Ports.Extractor;
 using Extraction.DDD.Example.Domain;
 
-namespace Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor
+namespace Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor.ExtractFromTextDocument
 {
 	public class ExtractFromTextDocument : IExtractFromTextDocument
 	{

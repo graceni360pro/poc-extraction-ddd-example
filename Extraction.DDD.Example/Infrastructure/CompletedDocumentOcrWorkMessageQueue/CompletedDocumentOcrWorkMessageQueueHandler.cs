@@ -1,4 +1,5 @@
-﻿using Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor;
+﻿using Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor.ExtractFromImageDocument;
+using Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor.ExtractFromTextDocument;
 
 namespace Extraction.DDD.Example.Infrastructure.RecognitionMessageQueue
 {

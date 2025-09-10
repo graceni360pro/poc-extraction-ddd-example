@@ -1,4 +1,4 @@
-﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor
+﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor.ExtractFromImageDocument
 {
 	public interface IExtractFromImageDocument
 	{

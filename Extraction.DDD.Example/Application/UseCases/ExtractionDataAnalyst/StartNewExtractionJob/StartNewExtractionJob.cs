@@ -2,7 +2,7 @@
 using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
 using Extraction.DDD.Example.Domain;
 
-namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
+namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst.StartNewExtractionJob
 { 
 	public class StartNewExtractionJob : IStartNewExtractionJob
 	{
