@@ -8,8 +8,11 @@ public class MongoDBExtractionJobCache : IExtractionJobRepository
 {
 	public ExtractionJob GetExtractionJob(GetExtractionJobRepositoryRequestDTO requestDTO)
 	{
-		ExtractedField extractedField = new ExtractedField("some id", "some name", "some value", 1, ExtractionReviewStatus.ReviewRequired, [0,1,2,3], 0, (decimal?)0.5);
+		// Retrieve the job from MongoDB (not implemented)
+		var jobData = new MongoExtractionJobDTO();
 
+		// adapt mongo DTO to extraction job (not implemented, instead let's just instantiate it)
+		ExtractedField extractedField = new ExtractedField("some id", "some name", "some value", 1, ExtractionReviewStatus.ReviewRequired, [0,1,2,3], 0, (decimal?)0.5);
 		IEnumerable<ExtractedField> extractedFields = new List<ExtractedField>() { extractedField };
 		ExtractionJob extractionJob = new ExtractionJob("job id", extractedFields);
 		return extractionJob;
