@@ -29,7 +29,7 @@ namespace Extraction.DDD.Example.Application.Actors.ExtractionJobProcessor
 
 			// Get existing extraction job
 			GetExtractionJobRepositoryRequestDTO getExtractionJobRepositoryRequestDTO = new GetExtractionJobRepositoryRequestDTO();
-			GetExtractionJobRepositoryResponseDTO extractionJob = extractionJobRepository.GetExtractionJob(getExtractionJobRepositoryRequestDTO);
+			ExtractionJob extractionJob = extractionJobRepository.GetExtractionJob(getExtractionJobRepositoryRequestDTO);
 
 			// Process extractionResult and extractionJob as needed (not implemented here)
 

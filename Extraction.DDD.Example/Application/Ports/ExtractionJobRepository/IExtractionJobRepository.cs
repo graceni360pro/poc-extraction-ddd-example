@@ -3,6 +3,6 @@
 	public interface IExtractionJobRepository
 	{
 		public StoreExtractionJobResponseDTO StoreExtractionJob(StoreExtractionJobRequestDTO requestDTO);
-		public GetExtractionJobRepositoryResponseDTO GetExtractionJob(GetExtractionJobRepositoryRequestDTO requestDTO);
+		public ExtractionJob GetExtractionJob(GetExtractionJobRepositoryRequestDTO requestDTO);
 	}
 }

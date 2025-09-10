@@ -5,7 +5,7 @@ namespace Extraction.DDD.Example.Infrastructure.MongoDB;
 
 public class MongoDBExtractionJobCache : IExtractionJobRepository
 {
-	public GetExtractionJobRepositoryResponseDTO GetExtractionJob(GetExtractionJobRepositoryRequestDTO requestDTO)
+	public ExtractionJob GetExtractionJob(GetExtractionJobRepositoryRequestDTO requestDTO)
 	{
 		// Get the job from MongoDB
 		throw new NotImplementedException();

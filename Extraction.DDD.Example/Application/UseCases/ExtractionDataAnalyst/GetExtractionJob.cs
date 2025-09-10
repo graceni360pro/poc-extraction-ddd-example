@@ -1,4 +1,5 @@
 ﻿using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
+using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst;
 
 namespace Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst
 {
@@ -13,10 +14,11 @@ namespace Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst
 		public GetExtractDocumentResponseDTO Execute(GetExtractionJobRequestDTO requestDTO)
 		{
 			GetExtractionJobRepositoryRequestDTO repositoryGetExtractionJobRequestDTO = new GetExtractionJobRepositoryRequestDTO();
-			GetExtractionJobRepositoryResponseDTO extractionJob = extractionJobRepository.GetExtractionJob(repositoryGetExtractionJobRequestDTO);
+			ExtractionJob extractionJob = extractionJobRepository.GetExtractionJob(repositoryGetExtractionJobRequestDTO);
 
-			// convert to GetExtractDocumentResponseDTO and return
-			return new GetExtractDocumentResponseDTO();
+			// Adapt to an output DTO for the use case. The domain model should not be exposed to the clients of the Application Layer.
+			GetExtractDocumentResponseDTO response = GetExtractedDocumentRsponseDTOMapper.ToDto(extractionJob);
+			return response;
 		}
 	}
 }
