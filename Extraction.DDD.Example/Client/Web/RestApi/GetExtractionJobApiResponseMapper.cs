@@ -1,6 +1,6 @@
 ﻿using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst;
 
-namespace Extraction.DDD.Example.Client.ExtractionDataAnalyst.RestApi
+namespace Extraction.DDD.Example.Client.Web.RestApi
 {
 	public static class GetExtractionJobApiResponseMapper
 	{

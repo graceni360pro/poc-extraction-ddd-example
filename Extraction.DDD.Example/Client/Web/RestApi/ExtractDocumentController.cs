@@ -1,7 +1,7 @@
 using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Extraction.DDD.Example.Client.ExtractionDataAnalyst.RestApi
+namespace Extraction.DDD.Example.Client.Web.RestApi
 {
     [ApiController]
     [Route("[controller]")]

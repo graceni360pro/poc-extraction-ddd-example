@@ -1,4 +1,4 @@
-namespace Extraction.DDD.Example.Client.ExtractionDataAnalyst.RestApi
+namespace Extraction.DDD.Example.Client.Web.RestApi
 {
 	public class GetExtractionJobApiResponse
 	{
