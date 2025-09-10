@@ -2,7 +2,7 @@
 using Extraction.DDD.Example.Application.Ports.Extractor;
 using Extraction.DDD.Example.Domain;
 
-namespace Extraction.DDD.Example.Application.Actors.ExtractionJobProcessor
+namespace Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor
 {
 	public class ExtractFromTextDocument : IExtractFromTextDocument
 	{
@@ -34,9 +34,7 @@ namespace Extraction.DDD.Example.Application.Actors.ExtractionJobProcessor
 			// Process extractionResult and extractionJob as needed (not implemented here)
 
 			// Store updated extraction job
-			StoreExtractionJobRequestDTO storeExtractionJobRequestDTO = new StoreExtractionJobRequestDTO();
-			extractionJobRepository.StoreExtractionJob(storeExtractionJobRequestDTO);
-
+			extractionJobRepository.StoreExtractionJob(extractionJob);
 		}
 	}
 }

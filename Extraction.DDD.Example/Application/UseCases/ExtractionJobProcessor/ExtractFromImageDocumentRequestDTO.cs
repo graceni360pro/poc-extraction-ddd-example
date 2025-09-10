@@ -1,5 +1,5 @@
-﻿namespace Extraction.DDD.Example.Application.Actors.ExtractionJobProcessor
-{
+﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor
+{ 
 	public class ExtractFromImageDocumentRequestDTO
 	{
 

@@ -1,4 +1,4 @@
-using Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst;
+using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Extraction.DDD.Example.Client.ExtractionDataAnalyst.RestApi
@@ -20,19 +20,21 @@ namespace Extraction.DDD.Example.Client.ExtractionDataAnalyst.RestApi
 			_getExtractionJobUseCase = getExtractionJobUseCase;
 		}
 		[HttpGet(Name = "StartNewExtractionJob")]
-		public StartNewExtractionJobResponse Post()
+		public StartNewExtractionJobApiResponse Post()
 		{
 			StartNewExtractionJobResponseDTO response = _startNewExtractionJobUseCase.Execute(new StartNewExtractionJobRequestDTO());
 			// Map DTO to Response
-			return new StartNewExtractionJobResponse();
+			return new StartNewExtractionJobApiResponse();
 		}
 
 		[HttpGet(Name = "GetExtractionJob")]
-        public GetExtractionJobResponse Get()
+        public GetExtractionJobApiResponse Get()
         {
-			GetExtractDocumentResponseDTO response = _getExtractionJobUseCase.Execute(new GetExtractionJobRequestDTO());
+			GetExtractionJobResponseDTO getExtractionJobResponse = _getExtractionJobUseCase.Execute(new GetExtractionJobRequestDTO());
+
 			// Map DTO to Response
-			return new GetExtractionJobResponse();
+			GetExtractionJobApiResponseMapper.ToDto(getExtractionJobResponse);
+			return new GetExtractionJobApiResponse();
 		}
     }
 }

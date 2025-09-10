@@ -1,12 +1,12 @@
-﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
+namespace Extraction.DDD.Example.Client.ExtractionDataAnalyst.RestApi
 {
-	public class GetExtractionJobResponseDTO
+	public class GetExtractionJobApiResponse
 	{
 		public string JobId { get; set; } = string.Empty;
-		public ExtractedFieldDTO[] ExtractedFields { get; set; } = [];
+		public ExtractedFieldApiDTO[] ExtractedFields { get; set; } = [];
 	}
 
-	public class ExtractedFieldDTO
+	public class ExtractedFieldApiDTO
 	{
 		public string Id { get; set; } = string.Empty;
 		public string Name { get; set; } = string.Empty;

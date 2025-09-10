@@ -1,5 +1,5 @@
-using Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst;
-using Extraction.DDD.Example.Application.Actors.ExtractionJobProcessor;
+using Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst;
+using Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor;
 using Extraction.DDD.Example.Application.Ports.DocumentOcrWorkDispatcher;
 using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
 using Extraction.DDD.Example.Application.Ports.Extractor;

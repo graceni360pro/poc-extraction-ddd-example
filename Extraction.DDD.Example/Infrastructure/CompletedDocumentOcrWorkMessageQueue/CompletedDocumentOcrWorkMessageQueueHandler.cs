@@ -1,4 +1,4 @@
-﻿using Extraction.DDD.Example.Application.Actors.ExtractionJobProcessor;
+﻿using Extraction.DDD.Example.Application.UseCases.ExtractionJobProcessor;
 
 namespace Extraction.DDD.Example.Infrastructure.RecognitionMessageQueue
 {

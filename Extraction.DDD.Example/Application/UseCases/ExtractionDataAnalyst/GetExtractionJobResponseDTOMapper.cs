@@ -1,22 +1,21 @@
-﻿using Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst;
-using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
+﻿using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
 using Extraction.DDD.Example.Domain;
 
 namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
 {
-	public static class GetExtractedDocumentRsponseDTOMapper
+	public static class GetExtractionJobResponseMapper
 	{
-		public static GetExtractDocumentResponseDTO ToDto(ExtractionJob extractionJob)
+		public static GetExtractionJobResponseDTO ToDto(ExtractionJob extractionJob)
 		{
-			return new GetExtractDocumentResponseDTO
+			return new GetExtractionJobResponseDTO
 			{
 				ExtractedFields = extractionJob.ExtractedFields.Select(f => ToDto(f)).ToArray()
 			};
 		}
 
-		public static ExtractedFieldDto ToDto(ExtractedField field)
+		public static ExtractedFieldDTO ToDto(ExtractedField field)
 		{
-			return new ExtractedFieldDto
+			return new ExtractedFieldDTO
 			{
 				Id = field.Id,
 				Name = field.Name,

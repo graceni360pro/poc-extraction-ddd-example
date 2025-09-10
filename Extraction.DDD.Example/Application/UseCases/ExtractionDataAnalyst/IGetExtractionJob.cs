@@ -1,7 +1,7 @@
-﻿namespace Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst
-{
+﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
+{ 
 	public interface IGetExtractionJob
 	{
-		GetExtractDocumentResponseDTO Execute(GetExtractionJobRequestDTO requestDTO);
+		GetExtractionJobResponseDTO Execute(GetExtractionJobRequestDTO requestDTO);
 	}
 }

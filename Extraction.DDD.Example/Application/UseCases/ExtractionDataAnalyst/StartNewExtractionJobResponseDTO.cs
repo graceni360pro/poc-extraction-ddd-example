@@ -1,4 +1,4 @@
-﻿namespace Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst
+﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
 {
 	public class StartNewExtractionJobResponseDTO
 	{

@@ -2,37 +2,34 @@
 
 public class ExtractedField
 {
-	/// <summary>
-	/// Field id. Purpose to be clarified.
-	/// </summary>
-	public string Id { get; set; } = string.Empty;
-	/// <summary>
-	/// Name of the field.
-	/// </summary>
-	public string Name { get; set; } = string.Empty;
-	/// <summary>
-	/// Extracted Value
-	/// </summary>
-	public string? ExtractedValue { get; set; }
-	/// <summary>
-	/// Extraction Confidence , 0..1
-	/// </summary>
-	public float? ExtractionConfidence { get; set; }
-	/// <summary>
-	/// Review Status can either be 'ReviewRequired' or 'ReviewNotRequired'
-	/// </summary>
-	public ExtractionReviewStatus? ReviewStatus { get; set; }
-	/// <summary>
-	/// BoundingBox = [Top, Left, Height, Width]
-	/// </summary>
-	public List<long> BoundingBox { get; set; } = [];
+	public string Id { get; }
+	public string Name { get; }
+	public string? ExtractedValue { get; }
+	public float? ExtractionConfidence { get; }
+	public ExtractionReviewStatus? ReviewStatus { get; }
+	public List<long> BoundingBox { get; }
+	public int? PageIndex { get; }
+	public decimal? OcrConfidence { get; }
 
-	/// <summary>
-	/// Page Index, 0 based
-	/// </summary>
-	public int? PageIndex { get; set; }
-	/// <summary>
-	/// OCR Confidence, 0..1
-	/// </summary>
-	public decimal? OcrConfidence { get; set; }
+	public ExtractedField(
+		string id,
+		string name,
+		string? extractedValue,
+		float? extractionConfidence,
+		ExtractionReviewStatus? reviewStatus,
+		List<long> boundingBox,
+		int? pageIndex,
+		decimal? ocrConfidence)
+	{
+		Id = id;
+		Name = name;
+		ExtractedValue = extractedValue;
+		ExtractionConfidence = extractionConfidence;
+		ReviewStatus = reviewStatus;
+		BoundingBox = boundingBox;
+		PageIndex = pageIndex;
+		OcrConfidence = ocrConfidence;
+
+		// Run business validation on creation. That way, the domain object is always clean and valid.
+	}
 }

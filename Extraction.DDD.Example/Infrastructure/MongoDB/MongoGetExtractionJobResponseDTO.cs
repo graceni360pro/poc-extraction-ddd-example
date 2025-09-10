@@ -1,12 +1,12 @@
-﻿namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
+﻿namespace Extraction.DDD.Example.Infrastructure.MongoDB
 {
-	public class GetExtractionJobResponseDTO
+	public class MongoGetExtractionJobResponseDTO
 	{
 		public string JobId { get; set; } = string.Empty;
-		public ExtractedFieldDTO[] ExtractedFields { get; set; } = [];
+		public MongoExtractedFieldDTO[] ExtractedFields { get; set; } = [];
 	}
 
-	public class ExtractedFieldDTO
+	public class MongoExtractedFieldDTO
 	{
 		public string Id { get; set; } = string.Empty;
 		public string Name { get; set; } = string.Empty;

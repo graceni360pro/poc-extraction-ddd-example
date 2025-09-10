@@ -1,8 +1,9 @@
 ﻿using Extraction.DDD.Example.Application.Ports.DocumentOcrWorkDispatcher;
 using Extraction.DDD.Example.Application.Ports.ExtractionJobRepository;
+using Extraction.DDD.Example.Domain;
 
-namespace Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst
-{
+namespace Extraction.DDD.Example.Application.UseCases.ExtractionDataAnalyst
+{ 
 	public class StartNewExtractionJob : IStartNewExtractionJob
 	{
 		private readonly IDocumentOcrWorkDispatcher documentOcrWorkDispatcher;
@@ -17,7 +18,12 @@ namespace Extraction.DDD.Example.Application.Actors.ExtractionDataAnalyst
 		}
 		public StartNewExtractionJobResponseDTO Execute(StartNewExtractionJobRequestDTO requestDTO)
 		{
-			StoreExtractionJobResponseDTO storeResponse = extractionJobRepository.StoreExtractionJob(new StoreExtractionJobRequestDTO());
+			// Create ExtractionJob (can be a factory)
+			ExtractionJob extractionJob = new ExtractionJob("jobId", new List<ExtractedField>());
+
+			// Store ExtractionJob (not a DTO). Pass clean application / domain objects to the repository.
+			// The repository will adapt them to the persistence model if needed.
+			StoreExtractionJobResponseDTO storeResponse = extractionJobRepository.StoreExtractionJob(extractionJob);
 
 			PublishDocumentRecognitionRequestDTO publishRequestDTO = new PublishDocumentRecognitionRequestDTO();
 			documentOcrWorkDispatcher.PublishDocumentRecognitionRequestAsync(publishRequestDTO);
