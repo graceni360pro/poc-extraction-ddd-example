@@ -1,6 +1,6 @@
 namespace Extraction.DDD.Example.Client.Web.RestApi
 {
-	public class GetExtractionJobApiResponse
+	public class GetExtractionJobApiResponseDTO
 	{
 		public string JobId { get; set; } = string.Empty;
 		public ExtractedFieldApiDTO[] ExtractedFields { get; set; } = [];

@@ -9,33 +9,33 @@ namespace Extraction.DDD.Example.Client.Web.RestApi
     public class ExtractDocumentController : ControllerBase
     {
         private readonly ILogger<ExtractDocumentController> _logger;
-		private readonly StartNewExtractionJob _startNewExtractionJobUseCase;
-		private readonly GetExtractionJob _getExtractionJobUseCase;
+		private readonly IStartNewExtractionJob _startNewExtractionJobUseCase;
+		private readonly IGetExtractionJob _getExtractionJobUseCase;
 
 		public ExtractDocumentController(ILogger<ExtractDocumentController> logger,
-			StartNewExtractionJob startNewExtractionJobUseCase,
-			GetExtractionJob getExtractionJobUseCase)
+			IStartNewExtractionJob startNewExtractionJobUseCase,
+			IGetExtractionJob getExtractionJobUseCase)
         {
             _logger = logger;
 			_startNewExtractionJobUseCase = startNewExtractionJobUseCase;
 			_getExtractionJobUseCase = getExtractionJobUseCase;
 		}
 		[HttpGet(Name = "StartNewExtractionJob")]
-		public StartNewExtractionJobApiResponse Post()
+		public StartNewExtractionJobApiResponseDTO Post()
 		{
 			StartNewExtractionJobResponseDTO response = _startNewExtractionJobUseCase.Execute(new StartNewExtractionJobRequestDTO());
 			// Map DTO to Response
-			return new StartNewExtractionJobApiResponse();
+			return new StartNewExtractionJobApiResponseDTO();
 		}
 
 		[HttpGet(Name = "GetExtractionJob")]
-        public GetExtractionJobApiResponse Get()
+        public GetExtractionJobApiResponseDTO Get()
         {
 			GetExtractionJobResponseDTO getExtractionJobResponse = _getExtractionJobUseCase.Execute(new GetExtractionJobRequestDTO());
 
 			// Map DTO to Response
 			GetExtractionJobApiResponseMapper.ToDto(getExtractionJobResponse);
-			return new GetExtractionJobApiResponse();
+			return new GetExtractionJobApiResponseDTO();
 		}
     }
 }

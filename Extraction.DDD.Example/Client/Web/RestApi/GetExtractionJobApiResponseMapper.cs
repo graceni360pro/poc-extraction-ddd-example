@@ -4,9 +4,9 @@ namespace Extraction.DDD.Example.Client.Web.RestApi
 {
 	public static class GetExtractionJobApiResponseMapper
 	{
-		public static GetExtractionJobApiResponse ToDto(GetExtractionJobResponseDTO extractionJob)
+		public static GetExtractionJobApiResponseDTO ToDto(GetExtractionJobResponseDTO extractionJob)
 		{
-			return new GetExtractionJobApiResponse
+			return new GetExtractionJobApiResponseDTO
 			{
 				JobId = extractionJob.JobId,
 				ExtractedFields = extractionJob.ExtractedFields.Select(f => ToDto(f)).ToArray()
